@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --fonte01: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte02: 'Permanent Marker', cursive;
+    --fonte03: 'Sriracha', cursive;
+}
+
+
+html, body{
+    min-height: 100vh;
+    background-color: darkgrey;
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    background-color: black;
+    padding-top: 30px;
+    text-align: center;
+    background-image: url("../imagens/fundo02.jpg");
+    background-size: cover;
+    
+}
+
+header > h1{
+    color: rgba(255, 255, 255, 0.705);
+    font-family: var(--fonte02);
+    font-size: 10vw;
+    font-variant: small-caps;
+    
+}
+
+header > p{
+    color: white;
+    padding-bottom: 50px;
+}
+
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    font-size: 3.5vw;
+    line-height: 2em;
+    font-family: var(--fonte03);
+    padding-left: 30px;
+}
+
+section > P{
+    padding-bottom: 1em;
+}
+
+section.normal{
+    background-color: white;
+    color: rgba(0, 0, 0, 0.774);
+    background-image: url("../imagens/fundo05.jpg");
+    background-size: cover;
+}
+
+section.imagem{
+    background-color: black;
+    color: rgba(255, 255, 255, 0.884);
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.507);
+}
+
+section.imagem > p{
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.534);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01{
+    background-image: url("../imagens/img01.jpg");
+    background-position: left center;
+    
+
+}
+
+section#img02{
+    background-image: url("../imagens/img02.jpg");
+    background-position: bottom center;
+}
+
+footer{
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    background-image: url("../imagens/fundo01e.png");
+    background-size: cover;
+
+}
+
+
+

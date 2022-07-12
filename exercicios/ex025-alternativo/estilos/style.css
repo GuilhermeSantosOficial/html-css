@@ -3,6 +3,11 @@
 body{
     font: normal 1em Arial, Helvetica;
 }
+
+li{
+    padding: 3px;
+}
+
 code{
     font-size: 1.2em;
 }

@@ -35,8 +35,7 @@
             &lt;form action="" method=""&gt;
                 &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
                 &lt;input id="nome" type-text&gt;
-        
-                &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+                &lt;button type="<strong>submit</strong>"&gt;Enviar&lt;/button&gt;
             &lt;/form&gt;
         </code>
     </pre>
@@ -48,6 +47,7 @@
 		<button type="submit">Enviar</button> 
     </form>
     <img src="imagens/input-button.png" alt="seta apontando para o botão">
+
     <p> O <code>type</code> poderia ser <code>button</code> que faria a mesma coisa, que é enviar o formulário. Lembrando que para a gente ainda não aprendeu como receber os dados do formulário. Então mesmo o botão sendo clicado não vamos receber.</p>
 
     <h2>RESET</h2>
@@ -59,7 +59,7 @@
             &lt;form action=""&gt;
                 &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
                 &lt;input id="nome" type-text&gt;
-                &lt;button type="reset"&gt;Limpar&lt;/button&gt;
+                &lt;button type="<strong>reset</strong>"&gt;Limpar&lt;/button&gt;
             &lt;/form&gt;
         </code>
     </pre>
@@ -71,8 +71,25 @@
     </form>
 
     <h2>AUTOFOCUS</h2>
-    
-</form>
-</form>
+
+    <pre>
+        <code>
+            &lt;form action=""&gt;
+                &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
+                &lt;input id="nome" type-text&gt;
+                &lt;button type="submit" <strong>autofocus</strong>&gt;Enviar&lt;/button&gt;
+            &lt;/form&gt;
+        </code>
+    </pre>
+
+    <form action="">
+        <label for="nome">Nome Completo</label>
+        <input id="nome" type-text>
+
+        <button type="submit" autofocus>Enviar</button>
+    </form>
+
+    <p>Note que o botão está com uma borda preta. Isso porquer o botão está com o autofocus e ele já estar selecionado. Se clicar enter no teclado ele já enviar o formulário vazio</p>
+
 </body>
 </html>

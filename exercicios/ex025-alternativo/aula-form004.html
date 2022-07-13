@@ -8,88 +8,109 @@
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
-    <h1>ELEMENTO &lt;button&gt;</h1>
-
-    <p>
-        O elemento &lt;button&gt; Representa um botão que tem algumas formas para ser usados, como por exemplo, é usado para enviar formulários. É estilizado pelo user agent, ou seja, cada navegador (user agent) vai estilizador do seu próprio jeito, podendo ter seu estilo mudado pelas CSS.
+    <section>
+        <h1>ELEMENTO &lt;button&gt;</h1>
+        <p>
+            O elemento &lt;button&gt; Representa um botão que tem algumas formas para ser usados, como por exemplo, é usado para enviar formulários. É estilizado pelo user agent, ou seja, cada navegador (user agent) vai estilizador do seu próprio jeito, podendo ter seu estilo mudado pelas CSS.
         
-    </p>
-    <h3>ATRIBUTOS</h3>
+        </p>
+        <h3>ATRIBUTOS</h3>
         
-    <ul>
-        <li><strong>type</strong></li>
         <ul>
-            <li><strong>submit</strong>: um botão com o <strong><code>type=”submit”*</code></strong> é usado para enviar o formulário.</li>
-            <li><strong>reset</strong>: um botão com o <strong><code>type=”reset”</code></strong> vai limpar os campos de formulário.</li>
-            <li><strong>button</strong>: um botão com o <strong><code>type=”button”</code></strong> é usado para enviar o formulário também.</li>
+            <li><strong>type</strong></li>
+            <ul>
+                <li><strong>submit</strong>: um botão com o <strong><code>type=”submit”*</code></strong> é usado para enviar o formulário.</li>
+                <li><strong>reset</strong>: um botão com o <strong><code>type=”reset”</code></strong> vai limpar os campos de formulário.</li>
+                <li><strong>button</strong>: um botão com o <strong><code>type=”button”</code></strong> é usado para enviar o formulário também.</li>
+            </ul>
+            <li><strong>autofocus</strong>: o atributo <strong><code>autofocus</code></strong> deixa o elemento marcado assim que abre a página.</li>
+            <li><strong>disabled</strong>: o atributo <strong><code>disabled</code></strong> desativa a funcionalidade do elemento.</li>
+            <li><strong>name</strong></li>
+            <li><strong>value</strong></li>
+            <li><strong>form</strong></li>
         </ul>
-        <li><strong>autofocus</strong>: o atributo <strong><code>autofocus</code></strong> deixa o elemento marcado assim que abre a página.</li>
-        <li><strong>disabled</strong>: o atributo <strong><code>disabled</code></strong> desativa a funcionalidade do elemento.</li>
-        <li><strong>name</strong></li>
-        <li><strong>value</strong></li>
-        <li><strong>form</strong></li>
-    </ul>
+        <pre>
+            <code>
+                &lt;form action="" method=""&gt;
+                    &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
+                    &lt;input id="nome" type-text&gt;
+                    &lt;button type="<strong>submit</strong>"&gt;Enviar&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <form action="" method="">
+                <label for="nome">Nome Completo</label>
+                <input id="nome" type-text>
+        
+                <button type="submit">Enviar</button>
+        </form>
+        <img src="imagens/input-button.png" alt="seta apontando para o botão">
+        <p> O <code>type</code> poderia ser <code>button</code> que faria a mesma coisa, que é enviar o formulário. Lembrando que para a gente ainda não aprendeu como receber os dados do formulário. Então mesmo o botão sendo clicado não vamos receber.</p>
+    </section>
 
-    <pre>
-        <code>
-            &lt;form action="" method=""&gt;
-                &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
-                &lt;input id="nome" type-text&gt;
-                &lt;button type="<strong>submit</strong>"&gt;Enviar&lt;/button&gt;
-            &lt;/form&gt;
-        </code>
-    </pre>
+    <section>
+        <h2>RESET</h2>
+        <p>Visualmente não muda a estética do botão. Mas agora ao ser clicado ele apaga o campo.</p>
+        <pre>
+            <code>
+                &lt;form action=""&gt;
+                    &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
+                    &lt;input id="nome" type-text&gt;
+                    &lt;button type="<strong>reset</strong>"&gt;Limpar&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <form action="">
+                <label for="nome">Nome Completo</label>
+            <input id="nome" type-text>
+            <button type="reset">Limpar</button>
+        </form>
+    </section>
 
-    <form action="" method="">
-		<label for="nome">Nome Completo</label>
-		<input id="nome" type-text>
+    <section>
+        <h2>AUTOFOCUS</h2>
+        <pre>
+            <code>
+                &lt;form action=""&gt;
+                    &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
+                    &lt;input id="nome" type-text&gt;
+                    &lt;button type="submit" <strong>autofocus</strong>&gt;Enviar&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <form action="">
+            <label for="nome">Nome Completo</label>
+            <input id="nome" type-text>
+            <button type="submit" autofocus>Enviar</button>
+        </form>
+        <p>Note que o botão está com uma borda preta. Isso porquer o botão está com o autofocus e ele já estar selecionado. Se clicar enter no teclado ele já enviar o formulário vazio</p>
+    </section>
 
-		<button type="submit">Enviar</button> 
-    </form>
-    <img src="imagens/input-button.png" alt="seta apontando para o botão">
+    <section>
+        <h2>DISABLED</h2>
+        <p>É bom usar o disabled e juntar ele com o javascript para não deixar o usuário enviar o formulário até que todos os campos estejam preenchidos.</p>
+        <pre>
+            <code>
+                &lt;form action=""&gt;
+                    &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
+                    &lt;input id="nome" type-text&gt;
+                    &lt;button type="submit" <strong>disabled</strong>&gt;Enviar&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <form action="">
+                <label for="nome">Nome Completo</label>
+            <input id="nome" type-text>
+            <button type="submit" disabled>Enviar</button>
+        </form>
+    </section>
 
-    <p> O <code>type</code> poderia ser <code>button</code> que faria a mesma coisa, que é enviar o formulário. Lembrando que para a gente ainda não aprendeu como receber os dados do formulário. Então mesmo o botão sendo clicado não vamos receber.</p>
+    <section>
+        <h2>NAME & VALUE</h2>
 
-    <h2>RESET</h2>
 
-    <p>Visualmente não muda a estética do botão. Mas agora ao ser clicado ele apaga o campo.</p>
+    </section>
 
-    <pre>
-        <code>
-            &lt;form action=""&gt;
-                &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
-                &lt;input id="nome" type-text&gt;
-                &lt;button type="<strong>reset</strong>"&gt;Limpar&lt;/button&gt;
-            &lt;/form&gt;
-        </code>
-    </pre>
-
-    <form action="">
-		<label for="nome">Nome Completo</label>
-        <input id="nome" type-text>
-        <button type="reset">Limpar</button>
-    </form>
-
-    <h2>AUTOFOCUS</h2>
-
-    <pre>
-        <code>
-            &lt;form action=""&gt;
-                &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
-                &lt;input id="nome" type-text&gt;
-                &lt;button type="submit" <strong>autofocus</strong>&gt;Enviar&lt;/button&gt;
-            &lt;/form&gt;
-        </code>
-    </pre>
-
-    <form action="">
-        <label for="nome">Nome Completo</label>
-        <input id="nome" type-text>
-
-        <button type="submit" autofocus>Enviar</button>
-    </form>
-
-    <p>Note que o botão está com uma borda preta. Isso porquer o botão está com o autofocus e ele já estar selecionado. Se clicar enter no teclado ele já enviar o formulário vazio</p>
 
 </body>
 </html>

@@ -14,7 +14,7 @@
         O elemento &lt;button&gt; Representa um botão que tem algumas formas para ser usados, como por exemplo, é usado para enviar formulários. É estilizado pelo user agent, ou seja, cada navegador (user agent) vai estilizador do seu próprio jeito, podendo ter seu estilo mudado pelas CSS.
         
     </p>
-    <h2>ATRIBUTOS</h2>
+    <h3>ATRIBUTOS</h3>
         
     <ul>
         <li><strong>type</strong></li>
@@ -30,6 +30,17 @@
         <li><strong>form</strong></li>
     </ul>
 
+    <pre>
+        <code>
+            &lt;form action="" method=""&gt;
+                &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
+                &lt;input id="nome" type-text&gt;
+        
+                &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+            &lt;/form&gt;
+        </code>
+    </pre>
+
     <form action="" method="">
 		<label for="nome">Nome Completo</label>
 		<input id="nome" type-text>
@@ -38,6 +49,27 @@
     </form>
     <img src="imagens/input-button.png" alt="seta apontando para o botão">
     <p> O <code>type</code> poderia ser <code>button</code> que faria a mesma coisa, que é enviar o formulário. Lembrando que para a gente ainda não aprendeu como receber os dados do formulário. Então mesmo o botão sendo clicado não vamos receber.</p>
-    
+
+    <h2>RESET</h2>
+
+    <p>Visualmente não muda a estética do botão. Mas agora ao ser clicado ele apaga o campo.</p>
+
+    <pre>
+        <code>
+            &lt;form action=""&gt;
+                &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
+                &lt;input id="nome" type-text&gt;
+                &lt;button type="reset"&gt;Limpar&lt;/button&gt;
+            &lt;/form&gt;
+        </code>
+    </pre>
+
+    <form action="">
+		<label for="nome">Nome Completo</label>
+        <input id="nome" type-text>
+        <button type="reset">Limpar</button>
+    </form>
+</form>
+</form>
 </body>
 </html>

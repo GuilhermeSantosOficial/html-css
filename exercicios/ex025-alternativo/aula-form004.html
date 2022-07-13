@@ -108,7 +108,40 @@
     <section>
         <h2>NAME & VALUE</h2>
 
+        <p>o name pode ser usado junto com o value.  O atributo dentro do value será recebido em algum lugar com o name button. Isso só vai fazer sentido quando aprendemos a receber o dados.</p>
 
+        <pre>
+            <code>
+                &lt;form action=""&gt;
+                    &lt;label for="nome"&gt;Nome Completo&lt;/label&gt;
+                    &lt;input id="nome" type-text&gt;
+                    &ltbutton type="submit" name="button" value="valor_qualquer"&gt;Enviar&lt;/button&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+
+        <form action="">
+            <label for="nome">Nome Completo</label>
+            <input id="nome" type-text>
+            <button type="submit" name="button" value="valor_qualquer">Enviar</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>FORM</h2>
+        
+        <pre>
+            <code>
+                &lt;form action="" method="" id="meu-formulario"&gt;&lt;/form&gt;
+                &lt;button type="submit" form="meu-formulario"&gt;&lt;/button&gt;
+            </code>
+        </pre>
+        
+        <form action="" method="" id="meu-formulario"><label>Aqui teria um formulário separado do botão como nos códigos acima</label></form>
+
+        <button type="submit" form="meu-formulario">Enviar</button>
+
+        <p>Quando esse ↑ botão for clicado, os dados que estiverem na tag form será enviado. O atributo form é usado para linkar os elementos. Se a tag form estivessem em um local distante de um botão é só criar esses link de id e form. </p>
     </section>
 
 

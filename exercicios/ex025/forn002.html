@@ -7,14 +7,14 @@
     <title>Formulário</title>
 </head>
 <body>
-    <form action="cadastro.php" method="get">
+    <form action="cadastro.php" method="get" autocomplete="on">
         <p><label for="ilogin">Login</label>
-        <input type="text" name="login" id="ilogin">
+        <input type="text" name="login" id="ilogin" minlength="3" size="30">
         </p>
         <p>
             
         <label for="isenha">Senha</label>
-        <input type="password" name="senha" id="isenha">
+        <input type="password" name="senha" id="isenha" minlength="8" maxlength="20" size="30">
         </p>
         <input type="submit" value="Enviar">
         <input type="reset" value="Limpar">

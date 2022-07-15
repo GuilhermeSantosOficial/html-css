@@ -7,10 +7,17 @@
     <title>Formulário</title>
 </head>
 <body>
-    <form action="cadastro.php" method="post">
-        <label for="ilogin">Login</label>
+    <form action="cadastro.php" method="get">
+        <p><label for="ilogin">Login</label>
         <input type="text" name="login" id="ilogin">
-
+        </p>
+        <p>
+            
+        <label for="isenha">Senha</label>
+        <input type="password" name="senha" id="isenha">
+        </p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
     </form>
     
 </body>

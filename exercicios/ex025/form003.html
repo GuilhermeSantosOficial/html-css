@@ -7,26 +7,21 @@
     <title>Formulário</title>
 </head>
 <body>
-    <form action="cadastro.php">
-        <div>
-            <label for="inumber">Número</label>
-            <input type="number" name="number" id="inumber">
-        </div>
-<br>
-        <div>
-            <label for="imonth">Mês</label>
-            <input type="month" name="month" id="imonth">
-        </div>
-<br>
-        <div>
-            <label for="idate">Data</label>
-            <input type="date" name="date" id="idate">
-        </div>
-<br>
-        <div>
-            <label for="idatatime">Data e Tempo</label>
-            <input type="datetime" name="datatime" id="idatatime">
-        </div>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome" required autocomplete="name" maxlength="30"  placeholder="Nome completo">
+        </p>
+        <p>
+            <label for="imedia">Média:</label>
+            <input type="number" name="media" id="imedia" required placeholder="0 a 10" min="0" max="10" step="0.5" autocomplete="cc-number">
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
     </form>
     
 </body>

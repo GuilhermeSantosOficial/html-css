@@ -1,2 +1,2 @@
-Dados enviados com sucesso!
+Dados enviados com sucesso! 
 Aprenda PHP para receber os dados.

@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Testando formulário</h1>
-    <form action="">
+    <form action="cadastro.php" method="post">
         
         <p>
             <label for="iest">Estado</label>
@@ -33,6 +33,7 @@
         <p>
             <label for="iprof">Profissão:</label>
             <input type="text" name="prof" id="iprof" list="lstprof">
+
             <datalist id="lstprof">
                 <option>Administrador</option>
                 <option>Contabilista</option>
@@ -43,7 +44,7 @@
 
         <p>
             <label for="imsg">Mensagem:</label> <br>
-            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="olá"></textarea>
         </p>
 
         <p>

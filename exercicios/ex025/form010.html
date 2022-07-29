@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+</head>
+<body>
+    <h2>Exemplo de formulário</h2>
+
+    <form action="cadastro.php" method="get">
+
+        <p>
+            <label for="inas">Ano de nascimento:</label>
+            <input type="number" name="nas" id="inas" min="1900" max="2022" required oninput="calcIdade()">
+            <!-- <input type="number" name="nas" id="inas" min="1900" max="2022" required oninput="iidade.innerHTML = Number(2022 - inas.value)"> -->
+        </p>
+
+        <p>
+            <label for="iidade">Idade</label>
+            <output id="iidade">0</output>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <script>
+        function calcIdade(){
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(inas.value)
+        }
+    </script>
+    
+</body>
+</html>
